@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "allowJs": true,
+    "checkJs": false,
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "strict": false,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "experimentalDecorators": true
+  }
+}
