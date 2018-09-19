@@ -1,0 +1,27 @@
+{
+  "name": "animoid",
+  "version": "0.1.0",
+  "description": "A web aimation utility.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.19.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glinkis/animoid.git"
+  },
+  "keywords": [
+    "animation",
+    "web"
+  ],
+  "author": "Victor Glindås",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Glinkis/animoid/issues"
+  },
+  "homepage": "https://github.com/Glinkis/animoid#readme"
+}
