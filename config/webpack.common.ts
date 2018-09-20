@@ -1,4 +1,5 @@
 import { Configuration } from "webpack";
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import path from "path";
 
 export const paths = {
@@ -12,8 +13,11 @@ export const config = {
     rules: [
       {
         test: /\.(j|t)sx?$/,
-        loader: "ts-loader",
-        exclude: /node_modules/
+        loader: "ts-loader"
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       }
     ]
   },
@@ -28,5 +32,11 @@ export const config = {
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
-  }
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
+  ]
 } as Configuration;

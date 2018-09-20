@@ -11,6 +11,7 @@ export default {
     port: 3000
   },
   plugins: [
+    ...config.plugins,
     new HtmlWebpackPlugin({
       template: `${paths.config}/template.dev.htm`
     })

@@ -6,8 +6,10 @@ export default {
   ...config,
   mode: "production",
   plugins: [
+    ...config.plugins,
     new HtmlWebpackPlugin({
-      template: `${paths.config}/template.prod.htm`
+      template: `${paths.config}/template.prod.htm`,
+      hash: true
     })
   ]
 } as Configuration;
