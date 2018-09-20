@@ -4,11 +4,13 @@
     "allowJs": true,
     "checkJs": false,
     "module": "commonjs",
-    "target": "esnext",
+    "target": "es5",
     "jsx": "react",
     "strict": false,
     "noImplicitAny": false,
     "sourceMap": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   }
 }
