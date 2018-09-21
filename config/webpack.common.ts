@@ -1,18 +1,18 @@
 import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import path from "path"
-import { Configuration } from "webpack"
+import { Configuration, Rule } from "webpack"
 
 export const paths = {
   config: path.resolve(__dirname),
   project: path.resolve(__dirname, "../")
 }
 
-export const tsLoader = {
+export const tsLoader: Rule = {
   test: /\.tsx?$/,
-  use: "ts-loader"
+  use: "babel-loader"
 }
 
-export const cssLoader = {
+export const cssLoader: Rule = {
   test: /\.(sa|sc|c)ss$/,
   use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
 }

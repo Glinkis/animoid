@@ -6,7 +6,7 @@ const prodConfig: Configuration = {
   ...config,
   mode: "production",
   plugins: [
-    ...config.plugins,
+    ...(config.plugins as []),
     new HtmlWebpackPlugin({
       hash: true,
       template: `${paths.config}/template.prod.htm`

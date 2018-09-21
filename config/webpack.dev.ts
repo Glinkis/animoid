@@ -2,7 +2,11 @@ import HtmlWebpackPlugin from "html-webpack-plugin"
 import { Configuration, HotModuleReplacementPlugin } from "webpack"
 import { config, cssLoader, paths } from "./webpack.common"
 
-cssLoader.use = ["style-loader", "css-loader", "sass-loader"]
+cssLoader.use = [
+  "style-loader",
+  "css-loader?sourceMap",
+  "sass-loader?sourceMap"
+]
 
 const devConfig: Configuration = {
   ...config,
@@ -15,7 +19,7 @@ const devConfig: Configuration = {
   devtool: "source-map",
   mode: "development",
   plugins: [
-    ...config.plugins,
+    ...(config.plugins as []),
     new HtmlWebpackPlugin({
       template: `${paths.config}/template.dev.htm`
     }),
