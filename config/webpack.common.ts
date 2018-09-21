@@ -7,6 +7,16 @@ export const paths = {
   project: path.resolve(__dirname, "../")
 }
 
+export const tsLoader = {
+  test: /\.tsx?$/,
+  use: "ts-loader"
+}
+
+export const cssLoader = {
+  test: /\.(sa|sc|c)ss$/,
+  use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+}
+
 export const config: Configuration = {
   entry: `${paths.project}/src`,
   externals: {
@@ -14,16 +24,7 @@ export const config: Configuration = {
     "react-dom": "ReactDOM"
   },
   module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: "ts-loader"
-      },
-      {
-        test: /\.(sa|sc|c)ss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-      }
-    ]
+    rules: [tsLoader, cssLoader]
   },
   optimization: {
     splitChunks: {
