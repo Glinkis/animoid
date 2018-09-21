@@ -8,8 +8,9 @@ A open source animation utility for the web.
 
 ## CLI
 
-| Command       | Description                                        |
-| ------------- | -------------------------------------------------- |
-| `yarn start`  | Starts a local development server.                 |
-| `yarn build`  | Runs a production build.                           |
-| `yarn deploy` | Deploys the current build. (Requires admin rights) |
+| Command  | Description                                        |
+| -------- | -------------------------------------------------- |
+| `start`  | Starts a local development server.                 |
+| `build`  | Runs a production build.                           |
+| `deploy` | Deploys the current build. (Requires admin rights) |
+| `lint`   | Runs ts-lint on the codebase.                      |
