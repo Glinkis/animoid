@@ -1,19 +1,23 @@
-import { Configuration } from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import path from "path";
+import MiniCssExtractPlugin from "mini-css-extract-plugin"
+import path from "path"
+import { Configuration } from "webpack"
 
 export const paths = {
   config: path.resolve(__dirname),
   project: path.resolve(__dirname, "../")
-};
+}
 
-export const config = {
+export const config: Configuration = {
   entry: `${paths.project}/src`,
+  externals: {
+    react: "React",
+    "react-dom": "ReactDOM"
+  },
   module: {
     rules: [
       {
         test: /\.(j|t)sx?$/,
-        loader: "ts-loader"
+        use: "ts-loader"
       },
       {
         test: /\.(sa|sc|c)ss$/,
@@ -26,17 +30,13 @@ export const config = {
       chunks: "all"
     }
   },
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM"
-  },
-  resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
-  },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
+      filename: "[name].css"
     })
-  ]
-} as Configuration;
+  ],
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
+  }
+}

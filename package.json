@@ -6,7 +6,8 @@
   "scripts": {
     "start": "rimraf dist && webpack-dev-server --config ./config/webpack.dev.ts",
     "build": "rimraf dist && webpack --config ./config/webpack.prod.ts",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "yarn build && gh-pages -d dist",
+    "lint": "tslint config/**/*.ts src/**/*.js src/**/*.tsx"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,11 @@
   },
   "homepage": "https://glinkis.github.io/animoid/",
   "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "webpack": "^4.19.1"
   },
   "devDependencies": {
     "@types/cypress": "^1.1.3",
@@ -34,18 +38,18 @@
     "@types/react-dom": "^16.0.7",
     "css-loader": "^1.0.0",
     "gh-pages": "^2.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
+    "prettier-tslint": "^0.4.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.1.0",
     "ts-loader": "^5.1.1",
     "ts-node": "^7.0.1",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
     "typescript": "^3.0.3",
-    "webpack": "^4.19.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.8"
   }

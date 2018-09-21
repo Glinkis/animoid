@@ -1,19 +1,22 @@
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import { config, paths } from "./webpack.common";
-import { Configuration } from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin"
+import { Configuration } from "webpack"
+import { config, paths } from "./webpack.common"
 
-export default {
+const devConfig: Configuration = {
   ...config,
-  mode: "development",
-  devtool: "source-map",
+  // @ts-ignore
   devServer: {
     host: "0.0.0.0",
     port: 3000
   },
+  devtool: "source-map",
+  mode: "development",
   plugins: [
     ...config.plugins,
     new HtmlWebpackPlugin({
       template: `${paths.config}/template.dev.htm`
     })
   ]
-} as Configuration;
+}
+
+export default devConfig
