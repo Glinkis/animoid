@@ -1,16 +1,16 @@
-import HtmlWebpackPlugin from "html-webpack-plugin"
-import { Configuration, HotModuleReplacementPlugin } from "webpack"
-import { config, cssLoader, paths } from "./webpack.common"
+// @ts-check
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { HotModuleReplacementPlugin } = require("webpack");
+const { config, cssLoader, paths } = require("./webpack.common");
 
 cssLoader.use = [
   "style-loader",
   "css-loader?sourceMap",
   "sass-loader?sourceMap"
-]
+];
 
-const devConfig: Configuration = {
+module.exports = {
   ...config,
-  // @ts-ignore
   devServer: {
     host: "0.0.0.0",
     hot: true,
@@ -19,12 +19,10 @@ const devConfig: Configuration = {
   devtool: "source-map",
   mode: "development",
   plugins: [
-    ...(config.plugins as []),
+    ...config.plugins,
     new HtmlWebpackPlugin({
       template: `${paths.config}/template.dev.htm`
     }),
     new HotModuleReplacementPlugin()
   ]
-}
-
-export default devConfig
+};

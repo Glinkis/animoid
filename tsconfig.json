@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
-    "allowJs": true,
-    "checkJs": false,
-    "module": "commonjs",
-    "target": "es5",
+    "module": "esnext",
+    "target": "es2015",
     "jsx": "react",
     "strict": true,
     "strictNullChecks": true,
@@ -12,6 +10,7 @@
     "sourceMap": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "esnext"]
   }
 }

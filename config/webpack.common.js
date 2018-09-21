@@ -1,23 +1,25 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin"
-import path from "path"
-import { Configuration, Rule } from "webpack"
+// @ts-check
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require("path");
 
-export const paths = {
+const paths = {
   config: path.resolve(__dirname),
   project: path.resolve(__dirname, "../")
-}
+};
 
-export const tsLoader: Rule = {
+const tsLoader = {
+  exclude: /node_modules/,
   test: /\.tsx?$/,
   use: "babel-loader"
-}
+};
 
-export const cssLoader: Rule = {
+const cssLoader = {
+  exclude: /node_modules/,
   test: /\.(sa|sc|c)ss$/,
   use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
-}
+};
 
-export const config: Configuration = {
+const config = {
   entry: `${paths.project}/src`,
   externals: {
     react: "React",
@@ -40,4 +42,11 @@ export const config: Configuration = {
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx", ".json"]
   }
-}
+};
+
+module.exports = {
+  paths,
+  tsLoader,
+  cssLoader,
+  config
+};
