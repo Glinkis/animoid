@@ -16,7 +16,7 @@ export const config: Configuration = {
   module: {
     rules: [
       {
-        test: /\.(j|t)sx?$/,
+        test: /\.tsx?$/,
         use: "ts-loader"
       },
       {
