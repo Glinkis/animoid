@@ -1,13 +1,12 @@
-// @ts-check
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { HotModuleReplacementPlugin } = require("webpack");
-const { config, cssLoader, paths } = require("./webpack.common");
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { HotModuleReplacementPlugin } = require("webpack")
+const { config, cssLoader, paths } = require("./webpack.common")
 
 cssLoader.use = [
   "style-loader",
   "css-loader?sourceMap",
   "sass-loader?sourceMap"
-];
+]
 
 module.exports = {
   ...config,
@@ -25,4 +24,4 @@ module.exports = {
     }),
     new HotModuleReplacementPlugin()
   ]
-};
+}

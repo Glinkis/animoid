@@ -1,6 +1,5 @@
-// @ts-check
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { config, paths } = require("./webpack.common");
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { config, paths } = require("./webpack.common")
 
 module.exports = {
   ...config,
@@ -12,4 +11,4 @@ module.exports = {
       template: `${paths.config}/template.prod.htm`
     })
   ]
-};
+}
