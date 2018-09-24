@@ -14,10 +14,8 @@ body {
 #app {
   color: #fff;
   text-align: center;
-  font-family: "Roboto Slab", serif;
 
-  h1 {
-    font-weight: 400;
-    margin: 20pt;
+  * {
+    font-family: "Roboto Slab", serif;
   }
 }

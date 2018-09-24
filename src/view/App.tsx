@@ -1,11 +1,13 @@
 import React from "react"
 import { hot } from "react-hot-loader"
 import "./App.scss"
+import { Button } from "./Button"
+import { Title } from "./Title"
 
 export const App = () => (
   <React.Fragment>
-    <h1 data-cy="title">animoid</h1>
-    <p>... under construction</p>
+    <Title />
+    <Button data-cy="create-project-btn" text="Create Project" />
   </React.Fragment>
 )
 

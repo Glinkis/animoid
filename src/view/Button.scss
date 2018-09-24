@@ -1,0 +1,16 @@
+.button {
+  font-weight: bold;
+  color: white;
+  border-radius: 4pt;
+  padding: 4pt 8pt;
+  border: none;
+  cursor: pointer;
+  background-size: 200% 200%;
+  background-image: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 1rem,
+    #465298 1rem,
+    #465298 2rem
+  );
+}
