@@ -4,6 +4,6 @@ describe("App component", () => {
   })
 
   it("has a title", () => {
-    cy.get("h1").should("contain", "animoid")
+    cy.get("[data-cy=title]").should("contain", "animoid")
   })
 })
