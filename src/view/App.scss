@@ -8,7 +8,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #20202f;
+  background: repeating-linear-gradient(
+    45deg,
+    #20202f,
+    #20202f 4pt,
+    #2b2b3d 4pt,
+    #2b2b3d 8pt
+  );
 }
 
 #app {
