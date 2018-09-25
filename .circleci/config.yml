@@ -22,7 +22,6 @@ jobs:
       - save_cache:
           paths:
             - ~/.cache
-            - ~/.npm
           key: v1-dependencies-{{ checksum "package.json" }}
       - run: yarn lint
       - run: yarn test
