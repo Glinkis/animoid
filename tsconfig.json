@@ -6,7 +6,7 @@
     "jsx": "react",
     "strict": true,
     "strictNullChecks": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "sourceMap": true,
     "experimentalDecorators": true,
     "esModuleInterop": true,
