@@ -2,7 +2,7 @@ import React from "react"
 import "./Title.scss"
 
 export const Title = () => (
-  <div data-cy="title" className="title">
-    <h1>animoid</h1>
-  </div>
+  <h1 data-cy="title" className="title">
+    animoid
+  </h1>
 )

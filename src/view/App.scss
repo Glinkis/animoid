@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,800,800i");
 
 html {
   width: 100%;
@@ -13,9 +13,8 @@ body {
 
 #app {
   color: #fff;
-  text-align: center;
 
   * {
-    font-family: "Roboto Slab", serif;
+    font-family: "Open Sans", sans-serif;
   }
 }
