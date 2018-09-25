@@ -6,6 +6,10 @@
     "tslint-config-prettier"
   ],
   "rules": {
+    "interface-name": {
+      "severity": "error",
+      "options": "never-prefix"
+    },
     "semicolon": {
       "severity": "error",
       "options": "never"
