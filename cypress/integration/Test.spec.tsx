@@ -7,4 +7,8 @@ describe("App component", () => {
   it("has a title", () => {
     cy.get("[data-cy=title]").should("exist")
   })
+
+  it("has a menu", () => {
+    cy.get("[data-cy=menu]").should("exist")
+  })
 })
